@@ -19,7 +19,7 @@ body{
 /* CABEÇALHO */
 
 header{
-    background: linear-gradient(135deg, #2e7d32, #43a047);
+    background: linear-gradient(135deg, #1565C0, #42A5F5, #4CAF50);
     padding: 20px 8%;
     position: sticky;
     top: 0;
