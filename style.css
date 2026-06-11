@@ -1,1 +1,219 @@
 
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fff8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header{
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #dcedc8;
+}
+
+/* BANNER */
+
+.banner{
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-text{
+    color: white;
+    max-width: 700px;
+    padding: 30px;
+}
+
+.banner h1{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.banner p{
+    font-size: 1.3rem;
+}
+
+/* SEÇÕES */
+
+section{
+    padding: 80px 10%;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2e7d32;
+    font-size: 2.2rem;
+}
+
+/* CARDS */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card{
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color: #2e7d32;
+    margin-bottom: 12px;
+}
+
+/* DIFERENTES CORES DAS SEÇÕES */
+
+#sustentabilidade{
+    background-color: #eef8ee;
+}
+
+#desafios{
+    background-color: #fdf4f4;
+}
+
+#futuro{
+    background-color: #eef7ff;
+}
+
+/* FORMULÁRIO */
+
+form{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: #43a047;
+}
+
+button{
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1b5e20;
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner h1{
+        font-size: 2.3rem;
+    }
+
+    .banner p{
+        font-size: 1rem;
+    }
+
+    section{
+        padding: 60px 6%;
+    }
+
+}
