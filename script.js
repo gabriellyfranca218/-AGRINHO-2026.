@@ -1,122 +1,171 @@
 // ======================
-// POP-UP DE BOAS-VINDAS
+// BOAS-VINDAS
 // ======================
 
 window.addEventListener("load", () => {
     setTimeout(() => {
         alert(
-            "🌱 Bem-vindo ao Raízes do Futuro!\n\nTecnologia e sustentabilidade trabalhando juntas pelo futuro do agronegócio. 💙"
+            "🌱 Bem-vindo ao Raízes do Futuro!\n\nTecnologia e sustentabilidade unidas para construir um futuro melhor! 💙"
         );
-    }, 800);
+    }, 1000);
 });
-
 
 // ======================
 // BOTÃO SAIBA MAIS
 // ======================
 
-const botao = document.getElementById("btnSaiba");
+const btnSaiba = document.getElementById("btnSaiba");
 
-botao.addEventListener("click", () => {
-
+btnSaiba.addEventListener("click", () => {
     alert(
-        "💙 O agronegócio sustentável utiliza tecnologia, inovação e preservação ambiental para produzir alimentos sem prejudicar a natureza."
+        "🌎 O agronegócio sustentável busca produzir alimentos utilizando tecnologias que preservam o solo, a água e o meio ambiente. 💚"
     );
-
 });
 
-
 // ======================
-// POP-UPS DOS CARDS
+// CARDS INFORMATIVOS
 // ======================
 
 const cards = document.querySelectorAll(".card");
 
 cards.forEach((card) => {
-
     card.addEventListener("click", () => {
 
-        const titulo = card.querySelector("h3").textContent;
+        const titulo =
+        card.querySelector("h3")?.textContent;
 
-        if (titulo === "Economia") {
-            alert(
-                "💰 O agronegócio representa uma das principais atividades econômicas do Brasil e gera milhões de empregos."
-            );
+        if (!titulo) return;
+
+        switch (titulo) {
+
+            case "Economia":
+                alert(
+                    "💰 O agronegócio movimenta bilhões de reais e gera milhões de empregos no Brasil."
+                );
+                break;
+
+            case "Alimentos":
+                alert(
+                    "🌾 O Brasil é um dos maiores produtores de alimentos do mundo."
+                );
+                break;
+
+            case "Meio Ambiente":
+                alert(
+                    "🌱 Produzir e preservar precisam caminhar juntos para garantir recursos às futuras gerações."
+                );
+                break;
+
+            case "Drones":
+                alert(
+                    "🚁 Drones ajudam a identificar pragas, monitorar plantações e economizar recursos."
+                );
+                break;
+
+            case "Sensores":
+                alert(
+                    "📡 Sensores medem umidade, temperatura e qualidade do solo em tempo real."
+                );
+                break;
+
+            case "Automação":
+                alert(
+                    "🤖 Máquinas inteligentes aumentam a produtividade e reduzem desperdícios."
+                );
+                break;
         }
 
-        else if (titulo === "Alimentos") {
-            alert(
-                "🌾 O campo produz alimentos essenciais para abastecer o Brasil e diversos países."
-            );
+    });
+});
+
+// ======================
+// CONTADORES ANIMADOS
+// ======================
+
+function animarContador(id, final) {
+
+    const elemento =
+    document.getElementById(id);
+
+    let numero = 0;
+
+    const intervalo =
+    setInterval(() => {
+
+        numero++;
+
+        elemento.textContent = numero;
+
+        if (numero >= final) {
+            clearInterval(intervalo);
         }
 
-        else if (titulo === "Meio Ambiente") {
-            alert(
-                "🌎 Produzir e preservar devem caminhar juntos para garantir recursos às futuras gerações."
-            );
-        }
+    }, 25);
 
-        else if (titulo === "Drones") {
-            alert(
-                "🚁 Drones monitoram plantações, identificam pragas e ajudam a economizar recursos."
-            );
-        }
+}
 
-        else if (titulo === "Sensores") {
-            alert(
-                "📡 Sensores medem umidade, temperatura e qualidade do solo em tempo real."
-            );
-        }
+animarContador("contador1", 19);
+animarContador("contador2", 150);
+animarContador("contador3", 70);
 
-        else if (titulo === "Automação") {
+// ======================
+// QUIZ
+// ======================
+
+const correta =
+document.getElementById("correta");
+
+const respostas =
+document.querySelectorAll(".quiz-btn");
+
+respostas.forEach((botao) => {
+
+    botao.addEventListener("click", () => {
+
+        if (botao.id === "correta") {
+
             alert(
-                "🤖 Máquinas inteligentes tornam a produção mais eficiente e sustentável."
+                "🎉 Parabéns! Você acertou!\n\nOs drones ajudam a monitorar plantações e identificar problemas rapidamente. 🚁"
             );
+
+        } else {
+
+            alert(
+                "❌ Não foi dessa vez!\n\nA resposta correta é: Drones 🚁"
+            );
+
         }
 
     });
 
 });
 
-
 // ======================
-// ANIMAÇÃO DOS CARDS
-// ======================
-
-cards.forEach((card) => {
-
-    card.addEventListener("mouseenter", () => {
-        card.style.transform =
-            "translateY(-15px) scale(1.06)";
-    });
-
-    card.addEventListener("mouseleave", () => {
-        card.style.transform =
-            "translateY(0px) scale(1)";
-    });
-
-});
-
-
-// ======================
-// VALIDAÇÃO DO FORMULÁRIO
+// FORMULÁRIO
 // ======================
 
 const formulario =
 document.getElementById("formulario");
 
-formulario.addEventListener("submit", (evento) => {
+formulario.addEventListener("submit",
+(evento) => {
 
     evento.preventDefault();
 
     const nome =
-    document.getElementById("nome").value.trim();
+    document.getElementById("nome")
+    .value
+    .trim();
 
     const email =
-    document.getElementById("email").value.trim();
+    document.getElementById("email")
+    .value
+    .trim();
 
     const mensagem =
-    document.getElementById("mensagem").value.trim();
+    document.getElementById("mensagem")
+    .value
+    .trim();
 
     if (
         nome === "" ||
@@ -125,7 +174,7 @@ formulario.addEventListener("submit", (evento) => {
     ) {
 
         alert(
-            "⚠️ Preencha todos os campos antes de enviar."
+            "⚠️ Preencha todos os campos."
         );
 
         return;
@@ -141,16 +190,31 @@ formulario.addEventListener("submit", (evento) => {
     }
 
     alert(
-        `✅ Obrigada, ${nome}!\n\nSua mensagem foi enviada com sucesso. 💙🌱`
+        `✅ Obrigada, ${nome}!\n\nSua mensagem foi enviada com sucesso! 🌱💙`
     );
 
     formulario.reset();
 
 });
 
+// ======================
+// BOTÃO VOLTAR AO TOPO
+// ======================
+
+const topo =
+document.getElementById("topo");
+
+topo.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
 
 // ======================
-// ANIMAÇÃO AO ROLAR
+// ANIMAÇÃO DAS SEÇÕES
 // ======================
 
 const secoes =
@@ -160,9 +224,9 @@ secoes.forEach((secao) => {
 
     secao.style.opacity = "0";
     secao.style.transform =
-        "translateY(60px)";
+    "translateY(60px)";
     secao.style.transition =
-        "all 1s ease";
+    "all 1s ease";
 
 });
 
@@ -170,16 +234,18 @@ function mostrarSecoes() {
 
     secoes.forEach((secao) => {
 
-        const topo =
+        const topoSecao =
         secao.getBoundingClientRect().top;
 
-        if (topo <
+        if (
+            topoSecao <
             window.innerHeight - 100
         ) {
 
             secao.style.opacity = "1";
             secao.style.transform =
-                "translateY(0)";
+            "translateY(0)";
+
         }
 
     });
@@ -193,25 +259,14 @@ window.addEventListener(
 
 mostrarSecoes();
 
-
 // ======================
-// MENU ATIVO
+// MENSAGEM DE CONSCIENTIZAÇÃO
 // ======================
 
-const links =
-document.querySelectorAll("nav a");
+setTimeout(() => {
 
-links.forEach((link) => {
+    alert(
+        "💙🌎 Cada pequena atitude sustentável ajuda a construir um futuro melhor para todos!"
+    );
 
-    link.addEventListener("click", () => {
-
-        links.forEach((item) => {
-            item.style.color = "white";
-        });
-
-        link.style.color =
-            "#80ed99";
-
-    });
-
-});
+}, 20000);
