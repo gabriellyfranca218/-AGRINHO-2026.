@@ -1,336 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raízes do Futuro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Futuro</title>
 
-  <style>
+    <link rel="stylesheet" href="style.css">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body{
-      background-color:#f4fff4;
-      color:#333;
-    }
-
-    /* CABEÇALHO */
-
-    header{
-      background-color:#2e7d32;
-      color:white;
-      padding:20px;
-    }
-
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-    }
-
-    .menu a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
-      font-weight:bold;
-    }
-
-    .menu a:hover{
-      color:#c8facc;
-    }
-
-    /* BANNER */
-
-    .banner{
-      height:400px;
-      background-image:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:white;
-    }
-
-    .banner-text{
-      background-color:rgba(0,0,0,0.5);
-      padding:30px;
-      border-radius:15px;
-    }
-
-    .banner h1{
-      font-size:48px;
-      margin-bottom:10px;
-    }
-
-    .banner p{
-      font-size:20px;
-    }
-
-    /* SEÇÕES */
-
-    section{
-      padding:60px 10%;
-    }
-
-    section h2{
-      color:#2e7d32;
-      margin-bottom:20px;
-      font-size:32px;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .card{
-      background:white;
-      padding:25px;
-      border-radius:15px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    /* FORMULÁRIO */
-
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-      max-width:500px;
-    }
-
-    input, textarea{
-      padding:12px;
-      border:1px solid #ccc;
-      border-radius:10px;
-    }
-
-    button{
-      padding:12px;
-      background-color:#2e7d32;
-      color:white;
-      border:none;
-      border-radius:10px;
-      cursor:pointer;
-      font-size:16px;
-    }
-
-    button:hover{
-      background-color:#1b5e20;
-    }
-
-    /* RODAPÉ */
-
-    footer{
-      background-color:#1b5e20;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-
-  </style>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
-
-  <header>
-    <nav>
-      <div class="logo">Raízes do Futuro</div>
-
-      <div class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#producao">Produção</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
-        <a href="#desafios">Desafios</a>
-        <a href="#futuro">Futuro</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- BANNER -->
-
-  <section class="banner" id="inicio">
-    <div class="banner-text">
-      <h1>Agro forte, futuro sustentável</h1>
-      <p>Cultivando o presente, preservando o futuro.</p>
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-seedling"></i>
+        Raízes do Futuro
     </div>
-  </section>
 
-  <!-- SEÇÃO 1 -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#sustentabilidade">Sustentabilidade</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
 
-  <section id="producao">
-    <h2>Produção Agrícola</h2>
+<section id="inicio" class="banner">
+
+    <div class="banner-texto">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+
+        <p>
+            Tecnologia, inovação e natureza trabalhando juntas para preservar o amanhã.
+        </p>
+
+        <button id="btnSaiba">
+            Saiba Mais
+        </button>
+
+    </div>
+
+</section>
+
+<section id="sobre">
+
+    <h2>Por que o Agronegócio é Importante?</h2>
 
     <div class="cards">
 
-      <div class="card">
-        <h3>Economia</h3>
-        <p>
-          O agronegócio movimenta a economia brasileira e gera milhões de empregos.
-        </p>
-      </div>
+        <div class="card">
+            <i class="fa-solid fa-tractor"></i>
 
-      <div class="card">
-        <h3>Tecnologia</h3>
-        <p>
-          Máquinas modernas, drones e sensores aumentam a produtividade no campo.
-        </p>
-      </div>
+            <h3>Economia</h3>
 
-      <div class="card">
-        <h3>Inovação</h3>
-        <p>
-          A agricultura de precisão melhora o uso dos recursos naturais.
-        </p>
-      </div>
+            <p>
+                O agronegócio gera empregos e movimenta a economia brasileira.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-wheat-awn"></i>
+
+            <h3>Alimentos</h3>
+
+            <p>
+                A produção agrícola é essencial para alimentar milhões de pessoas.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-earth-americas"></i>
+
+            <h3>Meio Ambiente</h3>
+
+            <p>
+                O futuro depende do equilíbrio entre produção e preservação.
+            </p>
+        </div>
 
     </div>
-  </section>
 
-  <!-- SEÇÃO 2 -->
+</section>
 
-  <section id="sustentabilidade">
+<section id="tecnologia">
+
+    <h2>Tecnologias do Futuro</h2>
+
+    <div class="cards">
+
+        <div class="card popup">
+            <i class="fa-solid fa-drone"></i>
+
+            <h3>Drones</h3>
+
+            <p>
+                Monitoram plantações e identificam problemas rapidamente.
+            </p>
+        </div>
+
+        <div class="card popup">
+            <i class="fa-solid fa-satellite"></i>
+
+            <h3>Sensores</h3>
+
+            <p>
+                Ajudam no controle da irrigação e do solo.
+            </p>
+        </div>
+
+        <div class="card popup">
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>Automação</h3>
+
+            <p>
+                Máquinas inteligentes aumentam a produtividade.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="sustentabilidade">
+
     <h2>Sustentabilidade</h2>
 
-    <div class="cards">
+    <img
+    src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854"
+    class="imagem">
 
-      <div class="card">
-        <h3>Conservação do Solo</h3>
-        <p>
-          Técnicas sustentáveis ajudam a preservar nutrientes e evitar erosão.
-        </p>
-      </div>
+    <p class="texto">
+        Produzir alimentos e preservar a natureza são objetivos que podem caminhar juntos através da inovação e das práticas sustentáveis.
+    </p>
 
-      <div class="card">
-        <h3>Energia Renovável</h3>
-        <p>
-          Energia solar e eólica reduzem impactos ambientais.
-        </p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>Uso Consciente da Água</h3>
-        <p>
-          Sistemas inteligentes evitam desperdícios na irrigação.
-        </p>
-      </div>
+<section id="contato">
 
-    </div>
-  </section>
+    <h2>Fale Conosco</h2>
 
-  <!-- SEÇÃO 3 -->
+    <form id="formulario">
 
-  <section id="desafios">
-    <h2>Desafios Ambientais</h2>
+        <input type="text"
+        id="nome"
+        placeholder="Seu nome">
 
-    <div class="cards">
+        <input type="email"
+        id="email"
+        placeholder="Seu e-mail">
 
-      <div class="card">
-        <h3>Desmatamento</h3>
-        <p>
-          A expansão agrícola descontrolada pode causar danos ambientais.
-        </p>
-      </div>
+        <textarea
+        id="mensagem"
+        placeholder="Digite sua mensagem">
+        </textarea>
 
-      <div class="card">
-        <h3>Poluição</h3>
-        <p>
-          O uso excessivo de produtos químicos afeta o meio ambiente.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Emissão de Carbono</h3>
-        <p>
-          Máquinas e queimadas aumentam os gases poluentes.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO 4 -->
-
-  <section id="futuro">
-    <h2>Soluções e Futuro</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Drones Agrícolas</h3>
-        <p>
-          Monitoramento inteligente das plantações.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Agricultura Regenerativa</h3>
-        <p>
-          Técnicas que recuperam o solo e preservam a natureza.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Inovação Sustentável</h3>
-        <p>
-          Tecnologia e meio ambiente trabalhando juntos.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-
-  <section id="contato">
-    <h2>Contato e Conscientização</h2>
-
-    <form>
-
-      <input type="text" placeholder="Seu nome">
-
-      <input type="email" placeholder="Seu e-mail">
-
-      <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
-
-      <button type="submit">Enviar</button>
+        <button type="submit">
+            Enviar
+        </button>
 
     </form>
 
-  </section>
+</section>
 
-  <!-- RODAPÉ -->
+<footer>
 
-  <footer>
-    <p>© 2026 - Raízes do Futuro | Sustentabilidade no Agronegócio</p>
-  </footer> 
-  <script src="script.js"></script>
-</body>
-</html>
+    <p>
+        © 2026 | Raízes do Futuro 🌱💙
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
