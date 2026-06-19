@@ -268,3 +268,40 @@ footer{
         width:90%;
     }
 }
+<section id="curiosidades">
+    <h2>Curiosidades do Agro</h2>
+
+    <div class="flashcards">
+
+        <div class="flashcard">
+            <div class="frente">
+                🌾 Você sabia?
+            </div>
+
+            <div class="verso">
+                O Brasil está entre os maiores produtores de alimentos do mundo.
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="frente">
+                💧 Água
+            </div>
+
+            <div class="verso">
+                Sistemas inteligentes economizam milhares de litros de água na irrigação.
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="frente">
+                🚁 Tecnologia
+            </div>
+
+            <div class="verso">
+                Drones ajudam a monitorar plantações e identificar pragas rapidamente.
+            </div>
+        </div>
+
+    </div>
+</section>
